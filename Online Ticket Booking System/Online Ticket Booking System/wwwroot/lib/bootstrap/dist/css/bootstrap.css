@@ -132,6 +132,10 @@ strong {
   font-weight: bolder;
 }
 
+.multiline {
+    white-space: pre-wrap;
+}
+
 small {
   font-size: 80%;
 }

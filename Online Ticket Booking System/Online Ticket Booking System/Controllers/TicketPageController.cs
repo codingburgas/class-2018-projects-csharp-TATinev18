@@ -9,35 +9,9 @@ using System.Threading.Tasks;
 
 namespace Online_Ticket_Booking_System.Controllers
 {
-    public class HomeController : Controller
+    public class TicketPageController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
-
-        public IActionResult Index()
-        {
-            return View();
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        public IActionResult AboutUs()
-        {
-            return View();
-        }
-
-        public IActionResult OtherServices()
-        {
-            return View();
-        }
-        public IActionResult ContactUs()
+        public IActionResult BuyTicket()
         {
             return View();
         }
@@ -47,5 +21,6 @@ namespace Online_Ticket_Booking_System.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
     }
 }
