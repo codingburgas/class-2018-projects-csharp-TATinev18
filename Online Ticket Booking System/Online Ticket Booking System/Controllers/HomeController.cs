@@ -60,17 +60,12 @@ namespace Online_Ticket_Booking_System.Controllers
             try
             {
                 MailMessage mail = new MailMessage();
-                // you need to enter your mail address
+
                 mail.From = new MailAddress("TATinev18@codingburgas.bg");
 
-                //To Email Address - your need to enter your to email address
                 mail.To.Add("TATinev18@codingburgas.bg");
 
                 mail.Subject = sendMailDto.Subject;
-
-                //you can specify also CC and BCC - i will skip this
-                //mail.CC.Add("");
-                //mail.Bcc.Add("");
 
                 mail.IsBodyHtml = true;
 
@@ -80,28 +75,22 @@ namespace Online_Ticket_Booking_System.Controllers
                 mail.Body = content;
 
 
-                //create SMTP instant
-
-                //you need to pass mail server address and you can also specify the port number if you required
                 SmtpClient smtpClient = new SmtpClient("smtp.office365.com");
 
-                //Create nerwork credential and you need to give from email address and password
                 NetworkCredential networkCredential = new NetworkCredential("TATinev18@codingburgas.bg", "Sax23753");
                 smtpClient.UseDefaultCredentials = false;
                 smtpClient.Credentials = networkCredential;
-                smtpClient.Port = 25; // this is default port number - you can also change this
-                smtpClient.EnableSsl = true; // if ssl required you need to enable it
+                smtpClient.Port = 25; 
+                smtpClient.EnableSsl = true; 
                 smtpClient.Send(mail);
 
                 ViewBag.Message = "Mail Send";
 
-                // now i need to create the from 
                 ModelState.Clear();
 
             }
             catch (Exception ex)
             {
-                //If any error occured it will show
                 ViewBag.Message = ex.Message.ToString();
             }
             return View();
