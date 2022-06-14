@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Online_Ticket_Booking_System.Models;
 using System;
@@ -11,6 +12,7 @@ using System.Threading.Tasks;
 
 namespace Online_Ticket_Booking_System.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
