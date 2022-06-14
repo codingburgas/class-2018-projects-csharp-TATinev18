@@ -16,12 +16,12 @@ namespace Online_Ticket_Booking_System.Areas.Identity
         public void Configure(IWebHostBuilder builder)
         {
             builder.ConfigureServices((context, services) => {
-                services.AddDbContext<Online_Ticket_Booking_SystemDbContext>(options =>
+                services.AddDbContext<AuthDbContext>(options =>
                     options.UseSqlServer(
                         context.Configuration.GetConnectionString("Online_Ticket_Booking_SystemDbContextConnection")));
 
                 services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                    .AddEntityFrameworkStores<Online_Ticket_Booking_SystemDbContext>();
+                    .AddEntityFrameworkStores<AuthDbContext>();
             });
         }
     }

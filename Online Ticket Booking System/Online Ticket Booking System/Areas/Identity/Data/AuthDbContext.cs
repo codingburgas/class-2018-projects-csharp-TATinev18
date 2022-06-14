@@ -9,9 +9,9 @@ using Online_Ticket_Booking_System.Areas.Identity.Data;
 
 namespace Online_Ticket_Booking_System.Data
 {
-    public class Online_Ticket_Booking_SystemDbContext : IdentityDbContext<ApplicationUser>
+    public class AuthDbContext : IdentityDbContext<ApplicationUser>
     {
-        public Online_Ticket_Booking_SystemDbContext(DbContextOptions<Online_Ticket_Booking_SystemDbContext> options)
+        public AuthDbContext(DbContextOptions<AuthDbContext> options)
             : base(options)
         {
         }
