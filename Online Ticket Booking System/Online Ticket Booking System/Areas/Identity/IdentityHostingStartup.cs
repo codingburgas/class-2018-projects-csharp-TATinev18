@@ -20,8 +20,13 @@ namespace Online_Ticket_Booking_System.Areas.Identity
                     options.UseSqlServer(
                         context.Configuration.GetConnectionString("Online_Ticket_Booking_SystemDbContextConnection")));
 
-                services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                    .AddEntityFrameworkStores<AuthDbContext>();
+                services.AddDefaultIdentity<ApplicationUser>(options =>
+                {
+                    options.SignIn.RequireConfirmedAccount = false;
+                    options.Password.RequireLowercase = true;
+                    options.Password.RequireUppercase = true;
+                })
+                   .AddEntityFrameworkStores<AuthDbContext>();
             });
         }
     }
