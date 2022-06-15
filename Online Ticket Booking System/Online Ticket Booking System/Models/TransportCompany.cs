@@ -10,7 +10,8 @@ namespace Online_Ticket_Booking_System.Models
     public class TransportCompany
     {
         [Key]
-        public int TCID { get; set; }
+        [Column(TypeName = "nvarchar(450)")]
+        public string TCID { get; set; }
 
         [Column(TypeName = "nvarchar(150)")]
         public string Name { get; set; }
