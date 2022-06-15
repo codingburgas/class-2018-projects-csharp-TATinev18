@@ -79,7 +79,7 @@ namespace Online_Ticket_Booking_System.Controllers
 
                 SmtpClient smtpClient = new SmtpClient("smtp.office365.com");
 
-                NetworkCredential networkCredential = new NetworkCredential("TATinev18@codingburgas.bg", "Sax23753");
+                NetworkCredential networkCredential = new NetworkCredential("TATinev18@codingburgas.bg", "Hac55028");
                 smtpClient.UseDefaultCredentials = false;
                 smtpClient.Credentials = networkCredential;
                 smtpClient.Port = 25; 

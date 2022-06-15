@@ -11,16 +11,15 @@ namespace Online_Ticket_Booking_System.Models
     {
         [Key]
         public int TicketID { get; set; }
-
         public int UserID { get; set; }
-
         public int DestID { get; set; }
 
-        [Column(TypeName = "decimal)")]
+        [Column(TypeName = "decimal(18,2)")]
         public decimal Price { get; set; }
-
-        public bool IsRoundTicket { get; set; }
-
+        public bool isRoundTicket { get; set; }
         public DateTime Date { get; set; }
+
+
+
     }
 }
