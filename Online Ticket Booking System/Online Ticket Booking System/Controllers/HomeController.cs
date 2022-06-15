@@ -63,9 +63,9 @@ namespace Online_Ticket_Booking_System.Controllers
             {
                 MailMessage mail = new MailMessage();
 
-                mail.From = new MailAddress("TATinev18@codingburgas.bg");
+                mail.From = new MailAddress("nekazavarsha@outlook.com");
 
-                mail.To.Add("TATinev18@codingburgas.bg");
+                mail.To.Add("nekazavarsha@outlook.com");
 
                 mail.Subject = sendMailDto.Subject;
 
@@ -79,7 +79,7 @@ namespace Online_Ticket_Booking_System.Controllers
 
                 SmtpClient smtpClient = new SmtpClient("smtp.office365.com");
 
-                NetworkCredential networkCredential = new NetworkCredential("TATinev18@codingburgas.bg", "Hac55028");
+                NetworkCredential networkCredential = new NetworkCredential("nekazavarsha@outlook.com", "Zavarshih2022!");
                 smtpClient.UseDefaultCredentials = false;
                 smtpClient.Credentials = networkCredential;
                 smtpClient.Port = 25; 
