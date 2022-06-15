@@ -82,7 +82,7 @@ namespace Online_Ticket_Booking_System.Controllers
                 NetworkCredential networkCredential = new NetworkCredential("nekazavarsha@outlook.com", "Zavarshih2022!");
                 smtpClient.UseDefaultCredentials = false;
                 smtpClient.Credentials = networkCredential;
-                smtpClient.Port = 354; 
+                smtpClient.Port = 25; 
                 smtpClient.EnableSsl = true; 
                 smtpClient.Send(mail);
 
